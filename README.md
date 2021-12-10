@@ -37,10 +37,10 @@ Mandatory technical requirements:
 
 > <pre>Now is 10:00:00<br />Submitted request ASSET_A at 10:00:01<br />Submitted request ASSET_B at 10:00:01<br />Submitted request ASSET_C at 10:00:01<br />(program hangs, waiting for some of the previous requests to finish)<br />Submitted request ASSET_D at 10:00:11<br />...</pre>
 
-- Use Coincap API: https://docs.coincap.io/
-  - Assets: https://docs.coincap.io/#89deffa0-ab03-4e0a-8d92-637a857d2c91
+- Use Coincap API: [CoinCap Docs](https://docs.coincap.io)
+  - Assets: [CoinCap Assets](https://docs.coincap.io/#89deffa0-ab03-4e0a-8d92-637a857d2c91)
     - Use the Assets API to lookup asset id by symbol
-  - Assets history price on specific date: https://docs.coincap.io/#61e708a8-8876-4fb2-a418-86f12f308978
+  - Assets history price on specific date: [CoinCap Assets History](https://docs.coincap.io/#61e708a8-8876-4fb2-a418-86f12f308978)
     - Use the following parameters so we can test with the same data: ```interval=d1&start=1617753600000&end=1617753601000```
 
 ## 3. EXAMPLE

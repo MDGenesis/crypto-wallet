@@ -9,7 +9,9 @@ CSV file representing the wallet with columns symbol, quantity, price
 
 #### Output
 Print a line with:
-> ```total={},best_asset={},best_performance={},worst_asset={},worst_performance={}```
+```
+total={},best_asset={},best_performance={},worst_asset={},worst_performance={}
+```
 
 #### Where
 - total: total financial value in USD of the entire wallet
@@ -25,15 +27,15 @@ Required environment, tools and languages:
 - Build the project with maven
 - Write your code in English
 - Read the CSV from src/main/resources and there is no need to validate the CSV, consider it will always be valid
-- Feel free to use any additional Java framework or libraries you want.
+- Feel free to use any additional Java framework or libraries you want. [^1]
+[^1]: You can use our code sample as your baseline or build from scratch.
 
 Mandatory technical requirements:
 - Write unit tests, it’s up to you to mock or not the API for the unit tests
-- Retrieve the prices simultaneously by groups of 3 assets concurrently, i.e., at any point, at most 3 threads will be active processing tasks – but never singlethreaded (unless there is only one asset in the wallet). For example, if you process a wallet with more than 3 assets, and each API call takes 10s, your code should log something like:
+- Retrieve the prices simultaneously by groups of 3 assets concurrently, i.e., at any point, at most 3 threads will be active processing tasks – but never singlethreaded (unless there is only one asset in the wallet). For example, if you process a wallet with more than 3 assets, and each API call takes 10s, your code should log something like: [^2]
+[^2]: As you need to return the total value of the wallet, your program will have to wait until all assets have been processed.
 
 > <pre>Now is 10:00:00<br />Submitted request ASSET_A at 10:00:01<br />Submitted request ASSET_B at 10:00:01<br />Submitted request ASSET_C at 10:00:01<br />(program hangs, waiting for some of the previous requests to finish)<br />Submitted request ASSET_D at 10:00:11<br />...</pre>
-> *Note: as you need to return the total value of the wallet, your program will have
-to wait until all assets have been processed.*
 
 - Use Coincap API: https://docs.coincap.io/
   - Assets: https://docs.coincap.io/#89deffa0-ab03-4e0a-8d92-637a857d2c91

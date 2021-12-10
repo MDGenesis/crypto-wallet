@@ -1,6 +1,5 @@
 # Welcome to Genesis Code Challenge
-
-![Captura de Tela 2021-12-10 às 10 42 28](https://user-images.githubusercontent.com/95918926/145583157-19497020-8b71-4a28-b674-1cd14da9e841.png)
+<p align="center"><img src="https://user-images.githubusercontent.com/95918926/145583157-19497020-8b71-4a28-b674-1cd14da9e841.png"></p>
 
 ## 1. OBJECTIVE
 Your assignment is to implement a Java program that given a collection of crypto assets with their positions, it must retrieve, concurrently, their latest prices from the Coincap API and return the updated total financial value of the wallet with performance data.
@@ -43,14 +42,14 @@ to wait until all assets have been processed.*
     - Use the following parameters so we can test with the same data: ```interval=d1&start=1617753600000&end=1617753601000```
 
 ## 3. EXAMPLE
-#### - GIVEN
+#### GIVEN
 > <pre>symbol,quantity,price<br />BTC,0.12345,37870.5058<br />ETH,4.89532,2004.9774</pre>
 
-#### - WHEN
+#### WHEN
   - Using Coincap Assets API, we get the asset ids “bitcoin” and “ethereum" respectively
   - Next, using the Coincap Assets History API, we get the prices “56999.9728252053067291” and “2032.1394325557042107” respectively
 
-#### - THEN
+#### THEN
 > Current BTC position is 0.12345 * 56999.9728252053067291<br />
 Current ETH position is 4.89532 * 2032.1394325557042107<br />
 Total = Current BTC Position + Current ETH Position<br />

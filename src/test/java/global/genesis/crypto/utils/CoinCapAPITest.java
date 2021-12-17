@@ -5,11 +5,9 @@ import org.mockito.Mock;
 
 import java.io.IOException;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.URL;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.BDDMockito.willThrow;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.mockito.Mockito.*;
 
 public class CoinCapAPITest {

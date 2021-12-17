@@ -12,11 +12,11 @@ public class Main {
         CsvParser csvParser = new CsvParser();
         CoinCapAPI coinCapAPI = new CoinCapAPI();
 
-		List<String> csv = csvParser.parseCsv();
-		csv.forEach(System.out::println);
+        List<String> csv = csvParser.parseCsv();
+        csv.forEach(System.out::println);
 
-		System.out.println(coinCapAPI.coinAssets());
+        System.out.println(coinCapAPI.coinAssets());
 
-	}
+    }
 
 }

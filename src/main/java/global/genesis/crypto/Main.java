@@ -7,12 +7,15 @@ import java.util.List;
 
 public class Main {
 
-	public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
 
-		List<String> csv = CsvParser.parseCsv();
+        CsvParser csvParser = new CsvParser();
+        CoinCapAPI coinCapAPI = new CoinCapAPI();
+
+		List<String> csv = csvParser.parseCsv();
 		csv.forEach(System.out::println);
 
-		System.out.println(CoinCapAPI.coinAssets());
+		System.out.println(coinCapAPI.coinAssets());
 
 	}
 
